@@ -1,0 +1,12 @@
+  <nav class="cd-side-nav">
+    <ul>
+      <li class="cd-label">
+        <a class="btn" routerLink="">categories</a>
+      </li>
+      <ul class="list-group-flush">
+        <li *ngFor="let category of categories" class="list-item">
+          <a class="btn" [routerLink]="[category.nom]">{{ category.nom }}</a>
+        </li>
+      </ul>
+    </ul>
+  </nav>

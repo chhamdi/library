@@ -1,0 +1,70 @@
+
+<div class="card-container manual-flip" >
+          <div class="card" >
+            <div class="front">
+              <div class="cover">
+                <img src="../../assets/x_rotating_card_v1.4/images/rotating_card_thumb.png"/>
+              </div>
+              <div class="user">
+                <img class="img-circle" src="../../assets/x_rotating_card_v1.4/images/rotating_card_profile2.png"/>
+              </div>
+              <div class="content">
+                <div class="main">
+                  <h3 class="name">{{ book?.nom }}</h3>
+                  <p class="profession">{{ book?.auteur }}</p>
+                  <p class="text-center">{{ book?.description }}</p>
+                </div>
+                <div class="footer">
+                  <button class="btn btn-simple" onclick="rotateCard(this)">
+                    <i class="fa fa-mail-forward"></i> plus de details
+                  </button>
+                </div>
+              </div>
+            </div> <!-- end front panel -->
+            <div class="back">
+              <div class="header">
+                <h5 class="motto">{{book?.categorie.nom }}</h5>
+              </div>
+              <div class="content">
+                <div class="main">
+                  <h4 class="text-center">{{ book?.nom }}</h4>
+                  <p class="text-center">{{ book?.description }}</p>
+
+                  <div class="stats-container">
+                    <div class="stats">
+                      <h4>{{ book?.prix }}$</h4>
+                      <p>
+                        prix
+                      </p>
+                    </div>
+                    <div class="stats">
+                      <h4>{{ book?.nombre_page }}</h4>
+                      <p>
+                        nombre de pages
+                      </p>
+                    </div>
+                    <div class="stats">
+                      <h4>{{ book?.langue }}</h4>
+                      <p>
+                        langue
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="footer">
+                <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                  <i class="fa fa-reply"></i> Back
+                </button>
+                <div class="social-links text-center">
+                  <a>panier</a>
+                </div>
+              </div>
+            </div> <!-- end back panel -->
+          </div> <!-- end card -->
+ </div> <!-- end card-container -->
+
+
+
+

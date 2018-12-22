@@ -1,0 +1,17 @@
+<div class="content-wrapper" style="padding-top: 70px">
+  <div class="row">
+    <div *ngIf="(book != null) then display else empty"></div>
+    <ng-template #display>
+    <div class="col-sm-12 col-sm-offest-1">
+        <div class="col-sm-4" >
+          <app-book [book]="book"></app-book>
+      </div>
+    </div>
+    </ng-template>
+    <ng-template #empty>
+      <div class="alert alert-danger"  align="center" style="width: 50% ;height: 50%; margin: auto">
+       <p style="font-size: 18px">Not found.<br><a href="registration.php" class="alert-link">Please try again.</a></p>
+      </div>
+    </ng-template>
+  </div>
+</div>

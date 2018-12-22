@@ -1,0 +1,27 @@
+<div class="content-wrapper" style="padding-top: 70px">
+  <div class="row">
+    <div class="col-sm-12 col-sm-offest-1">
+      <nav class="navbar navbar-light bg-light">
+        <label>Max Price: {{ price }}$</label>
+        <div class="range-control">
+          <input [(ngModel)]="price" value="50" id="inputRange" type="range" min="0" max="50" step="5"  data-thumbwidth="20">
+          <output name="rangeVal">{{ price }}$</output>
+        </div>
+        <button (click)="sortingPrices()" class="btn btn-success" >Sort by Price</button>
+        <button (click)="sortingNames()" class="btn btn-success" >Sort A-Z</button>
+        <label for="pages">page count:</label>
+        <input #value (keyup.enter)="pagesNumber(value)" style="width: 5% ; background-color: inherit" type="text" class="form-control" id="pages">
+      </nav>
+        <div *ngFor="let oneBook of books">
+          <div *ngIf=" (price >= oneBook.prix)&&(pages >= oneBook.nombre_page) then displaying"></div>
+          <ng-template #displaying>
+              <div class="col-sm-4" >
+                <app-book [book]="oneBook"></app-book>
+              </div>
+          </ng-template>
+        </div>
+    </div>
+  </div>
+</div>
+
+

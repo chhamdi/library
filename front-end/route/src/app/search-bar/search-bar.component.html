@@ -1,0 +1,29 @@
+<header class="cd-main-header">
+  <h2 href="index.php" class="logo">INSAT'S <span class="lite">LIBRARY</span></h2>
+
+  <div class="cd-search is-hidden">
+      <input #bookSearch (keyup.enter)="searching(bookSearch)" type="search" placeholder="Search...">
+  </div> <!-- cd-search -->
+
+  <a href="#" class="cd-nav-trigger">Menu<span></span></a>
+
+  <nav class="cd-nav">
+    <ul class="cd-top-nav">
+      <li><a href="#">Tour</a></li>
+      <li><a href="#">Support</a></li>
+      <li class="has-children account">
+        <a href="#">
+          <img src="../../assets/responsive-sidebar-navigation-master/img/cd-avatar.png" alt="avatar">
+          Account
+        </a>
+
+        <ul>
+
+          <li><a class="btn" href="#">My Account</a></li>
+          <li><a href="#">Edit Account</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header> <!-- .cd-main-header -->
